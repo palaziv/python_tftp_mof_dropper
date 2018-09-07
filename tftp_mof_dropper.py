@@ -83,9 +83,9 @@ def main():
     parser.add_argument('--lhost', help='the local host', required=True)
     parser.add_argument('--lport', help='the local port to listen on for incoming reverse shell', default=4444)
     parser.add_argument('--exe_rfile',
-                        help='the path on the remote host where the exe file (msf payload) should be upload to',
+                        help='the path on the remote host where the exe file (msf payload) should be uploaded to',
                         default='/Windows/System32/')
-    parser.add_argument('--mof_rfile', help='the path on the remote host where the mof file should be upload to',
+    parser.add_argument('--mof_rfile', help='the path on the remote host where the mof file should be uploaded to',
                         default='/Windows/System32/wbem/mof/')
     parser.add_argument('--msf_payload', help='the msf payload to use', default='windows/meterpreter/reverse_tcp')
     args = parser.parse_args()
