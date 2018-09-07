@@ -77,7 +77,7 @@ def random_string_generator(size=8, chars=string.ascii_lowercase + string.ascii_
 
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--rhost', help='the remote host', required=True)
     parser.add_argument('--rport', help='the remote tftp port', default=69)
     parser.add_argument('--lhost', help='the local host', required=True)
